@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",StartCPUVsCPU);
+document.addEventListener("DOMContentLoaded",StartHumanVsCPU);
 
 let gameModel;
 let gameController;
@@ -47,7 +47,7 @@ function StartCPUVsCPU(){
     
     gameModel.setViewObserver(gameView);
 
-    player1 = new HumanPlayer(1);
+    player1 = new CPUPlayer(1);
     player2 = new CPUPlayer(2);    
     
     gameModel.player1 = player1;
