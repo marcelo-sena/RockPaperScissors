@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded",StartHumanVsHuman);
-
+document.addEventListener("DOMContentLoaded",StartCPUVsCPU);
 
 let gameModel;
 let gameController;
@@ -20,9 +19,40 @@ function StartHumanVsHuman(){
     
     gameModel.player1 = player1;
     gameModel.player2 = player2;
-
+    gameController.startGame();
     gameView.updateDOM();  
 }
 
+function StartHumanVsCPU(){
+    gameModel = new GameModel();
+    gameController = new VersusCPUController(gameModel);
+    gameView = new GameView(gameController, gameModel);
+    
+    gameModel.setViewObserver(gameView);
 
+    player1 = new HumanPlayer(1);
+    player2 = new CPUPlayer(2);    
+    
+    gameModel.player1 = player1;
+    gameModel.player2 = player2;
+    
+    gameController.startGame();
+    gameView.updateDOM();  
+}
 
+function StartCPUVsCPU(){
+    gameModel = new GameModel();
+    gameController = new CPUOnlyController(gameModel);
+    gameView = new GameView(gameController, gameModel);
+    
+    gameModel.setViewObserver(gameView);
+
+    player1 = new HumanPlayer(1);
+    player2 = new CPUPlayer(2);    
+    
+    gameModel.player1 = player1;
+    gameModel.player2 = player2;
+    
+    gameController.startGame();
+    gameView.updateDOM();  
+}

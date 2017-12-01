@@ -11,6 +11,9 @@ class GameController{
         this.instance = this;
     }
 
+    startGame(){}
+
+
     checkAllActionTaken(_this){      
         _this.gameModel.playerActionTaken();
 
@@ -32,7 +35,6 @@ class GameController{
     }
 
     resetAndRestart(){
-        console.log('restart');
         this.gameModel.resetMatchValues();
     }
 

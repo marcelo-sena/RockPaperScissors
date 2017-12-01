@@ -72,7 +72,6 @@ class GameView {
     playerOneInputHandler(keyName){
         if(!this.gameModel.player1.canInput())
             return;
-        console.log(keyName);
 
         if(keyName === "a"){
             gameModel.player1.choice = new Rock();
