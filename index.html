@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>		
+	<section class = "mainContent">	
+		<section class="mainMenu">
+			<header>
+				<h1>Rock Paper Scissors</h1>
+			</header>
+			<section class="options">	
+				<h1>Choose your game mode:</h1> 		
+				<aside>
+					<div class="button">
+						<a href="#">VS CPU</a> 
+					</div>
+				</aside>
+				<aside>
+					<div class="button">
+						<a href="#">VS HUMAN</a> 
+					</div>
+				</aside>
+				<aside>
+					<div class="button">
+						<a href="#">CPU VS CPU</a> 
+					</div>
+				</aside>
+			</section>
+		</section>		
+
+		<section class="game">
+			<div id="title">
+				<h1>MAKE YOUR CHOICE!</h1>	
+			</div>		
+			<aside id = "p1">
+				<h2 id="playerOneScore">PLAYER 1 :</h2>
+				<img id ="playerOneImage" src="images/none.png" alt="">
+				<div id = "playerOneStatus">
+					<h6 id="playerOneStatusText">WINNER</h6>					
+				</div>
+			</aside>
+			<aside>
+				<h2  id="playerTwoScore">PLAYER 2</h2>
+				<img id ="playerTwoImage" src="images/none.png" alt="" id = "p2">
+				<div id = "playerTwoStatus">
+						<h6 id="playerTwoStatusText">READY</h6>					
+					</div>
+			</aside>		
+		</section>
+		<footer>
+			<div class="container">
+				<p><b>Instructions</b><p>	
+				<p>Player 1: A = Rock, S = Paper, D = Scissors<p>	
+				<p>Player 2: J = Rock, K = Paper, L = Scissors<p>	
+			</div>
+		</footer>
+	
+	</section>
+
+	<script src="script/rps/RPSBase.js"></script>
+	<script src="script/rps/Rock.js"></script>
+	<script src="script/rps/Paper.js"></script>
+	<script src="script/rps/Scissors.js"></script>
+	<script src="script/player/Player.js"></script>	
+	<script src="script/player/HumanPlayer.js"></script>
+	<script src="script/Observer.js"></script>        
+	<script src="script/GameModel.js"></script>          
+	<script src="script/GameController.js"></script>
+	<script src="script/GameView.js"></script>
+	<script src="script/Main.js"></script>
+
+</body>
+</html>
