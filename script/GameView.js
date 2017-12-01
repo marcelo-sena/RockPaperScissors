@@ -73,15 +73,15 @@ class GameView {
         if(!this.gameModel.player1.canInput())
             return;
 
-        if(keyName === "a"){
+        if(keyName === "a" ||keyName === "A"){
             gameModel.player1.choice = new Rock();
             this.gameViewSubject.notifyOberservers();
         }
-        if(keyName === "s"){
+        if(keyName === "s" ||keyName === "S"){
             gameModel.player1.choice = new Paper();
             this.gameViewSubject.notifyOberservers();
         }
-        if(keyName === "d"){
+        if(keyName === "d" ||keyName === "D"){
             gameModel.player1.choice = new Scissors();
             this.gameViewSubject.notifyOberservers();            
         }
@@ -90,13 +90,13 @@ class GameView {
     playerTwoInputHandler(keyName){
         if(!this.gameModel.player2.canInput())
             return;
-        if(keyName === "j"){
+        if(keyName === "j" ||keyName === "J"){
             gameModel.player2.choice = new Rock();           
         }
-        else if(keyName === "k"){
+        else if(keyName === "k" ||keyName === "K"){
             gameModel.player2.choice = new Paper();   
         }
-        else if(keyName === "l"){
+        else if(keyName === "l" ||keyName === "L"){
             gameModel.player2.choice = new Scissors();
         }
         this.gameViewSubject.notifyOberservers();  

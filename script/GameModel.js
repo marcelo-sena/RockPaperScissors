@@ -90,10 +90,8 @@ class GameModel{
             default:    
                 return this.neutralColor;
                 break;                
-        }
-    
+        }    
     }
-
 }
 
 const resultType = {

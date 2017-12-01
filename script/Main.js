@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded",StartHumanVsCPU);
+document.addEventListener("DOMContentLoaded",OnLoad);
 
 let gameModel;
 let gameController;
@@ -6,6 +6,10 @@ let gameView;
 
 let player1;
 let player2;    
+
+let mainMenu = document.getElementById('main');
+
+function OnLoad(){}    
 
 function StartHumanVsHuman(){
     gameModel = new GameModel();
@@ -21,6 +25,7 @@ function StartHumanVsHuman(){
     gameModel.player2 = player2;
     gameController.startGame();
     gameView.updateDOM();  
+    mainMenu.style.display = "none";
 }
 
 function StartHumanVsCPU(){
@@ -38,6 +43,7 @@ function StartHumanVsCPU(){
     
     gameController.startGame();
     gameView.updateDOM();  
+    mainMenu.style.display = "none";
 }
 
 function StartCPUVsCPU(){
@@ -55,4 +61,9 @@ function StartCPUVsCPU(){
     
     gameController.startGame();
     gameView.updateDOM();  
+    mainMenu.style.display = "none";
+}
+
+function BackToMainMenu(){  
+    window.location.reload()
 }

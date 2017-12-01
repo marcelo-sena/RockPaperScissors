@@ -42,17 +42,16 @@ section.options aside{
 	margin: 30px auto 30px auto;
 }
 
-
 .mainMenu{
 	width: 800px;
 	height: 650px;
 	background: rgb(255, 255, 255);
 	position:absolute;
 	display: block;
-	display: none;
 	border-style: solid;
 	border-width: medium;
 	border-color: #DECF95;
+	z-index: 5;
 }
 
 .mainContent{
@@ -62,7 +61,6 @@ section.options aside{
 	margin: 0 auto;
 	margin-top: 60px;
 }
-
 
 .button{
 	width: 200px;
@@ -84,6 +82,16 @@ section.options aside{
 
 .button:hover{
 	background: #D4C9A5;
+}
+
+#buttonBack{
+	width: 190px;
+	height: 22px;
+	background: #DECF95;
+	padding: 20px 5px 5px 0;
+	margin: 0 auto;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .button:hover a{
@@ -166,7 +174,7 @@ section.game aside img{
 }
 
 #playerTwoImage{
-	transform: scaleX(-1);
+	transform: scaleX(-1);	
 }
 
 footer {

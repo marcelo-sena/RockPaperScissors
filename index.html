@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>ROCK PAPER SCISSORS</title>
 	<link rel="stylesheet" href="style/style.css">
 
 </head>
 <body>		
 	<section class = "mainContent">	
-		<section class="mainMenu">
+		<section class="mainMenu" id="main">
 			<header>
 				<h1>Rock Paper Scissors</h1>
 			</header>
 			<section class="options">	
 				<h1>Choose your game mode:</h1> 		
 				<aside>
-					<div class="button">
+					<div class="button" onclick="StartHumanVsCPU()">
 						<a href="#">VS CPU</a> 
 					</div>
 				</aside>
 				<aside>
-					<div class="button">
+					<div class="button" onclick="StartHumanVsHuman()">
 						<a href="#">VS HUMAN</a> 
 					</div>
 				</aside>
 				<aside>
-					<div class="button">
+					<div class="button"  onclick="StartCPUVsCPU()">
 						<a href="#">CPU VS CPU</a> 
 					</div>
 				</aside>
@@ -53,6 +53,9 @@
 		</section>
 		<footer>
 			<div class="container">
+				<div class="button" id="buttonBack" onclick="BackToMainMenu()">
+					<a href="#">MAIN MENU</a> 
+				</div>
 				<p><b>Instructions</b><p>	
 				<p>Player 1: A = Rock, S = Paper, D = Scissors<p>	
 				<p>Player 2: J = Rock, K = Paper, L = Scissors<p>	
